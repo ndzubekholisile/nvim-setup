@@ -13,5 +13,6 @@ vim.opt.rtp:prepend(lazypath)
  
 require("lazy").setup({
     spec = "kndzub.lazy",
+    checker={enabled=true,notify=false},
     change_detection = { notify = false }
 })
