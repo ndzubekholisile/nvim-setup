@@ -10,7 +10,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "vtsls" }, -- Auto-install these
+				ensure_installed = { "lua_ls" }, -- Auto-install these
 			})
 		end,
 	},
@@ -23,6 +23,7 @@ return {
 					-- Formatters/Linters (not LSPs)
 					"stylua",
 					"prettier",
+					"prettierd",
 				},
 			})
 		end,

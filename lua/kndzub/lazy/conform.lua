@@ -6,7 +6,7 @@ return {
 		{
 			"<leader>f",
 			function()
-				require("conform").format({ async = true, lsp_fallback = true })
+				require("conform").format({ async = true, lsp_fallback = false })
 			end,
 			mode = "",
 			desc = "Format buffer",
@@ -18,11 +18,11 @@ return {
 			-- Use a sub-list to run only the first available formatter
 			javascript = { "prettierd", "prettier", stop_after_first = true },
 			typescript = { "prettierd", "prettier", stop_after_first = true },
-			python = { "black" },
+			typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 		},
 		format_on_save = {
 			timeout_ms = 500,
-			lsp_fallback = true,
+			lsp_fallback = false,
 		},
 	},
 }
