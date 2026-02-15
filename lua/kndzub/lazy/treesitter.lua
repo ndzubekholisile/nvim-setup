@@ -3,16 +3,7 @@ return {
 	build = ":TSUpdate",
 	config = function()
 		require("nvim-treesitter").install({
-			"c",
 			"lua",
-			"vim",
-			"vimdoc",
-			"elixir",
-			"javascript",
-			"html",
-			"python",
-			"typescriptreact",
-			"typescript",
 		})
 
 		require("nvim-treesitter").setup({
