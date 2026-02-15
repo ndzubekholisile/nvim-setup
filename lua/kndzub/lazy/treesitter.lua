@@ -2,21 +2,20 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	config = function()
-		local configs = require("nvim-treesitter.config")
+		require("nvim-treesitter").install({
+			"c",
+			"lua",
+			"vim",
+			"vimdoc",
+			"elixir",
+			"javascript",
+			"html",
+			"python",
+			"typescriptreact",
+			"typescript",
+		})
 
-		configs.setup({
-			ensure_installed = {
-				"c",
-				"lua",
-				"vim",
-				"vimdoc",
-				"elixir",
-				"javascript",
-				"html",
-				"python",
-				"typescriptreact",
-				"typescript",
-			},
+		require("nvim-treesitter").setup({
 			autotag = {
 				enable = true,
 			},
